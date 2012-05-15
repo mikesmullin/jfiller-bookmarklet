@@ -244,10 +244,10 @@
               return {name: 'any_from_list', value: $.button.menu.find('input[name="any_from_list"]').val()};
 
             case 'gen_text':
+            default:
               return {name: 'gen_text', value: ''};
 
             case 'dont_fill':
-            default:
               return {name: 'dont_fill', value: ''};
 
           }
@@ -376,11 +376,11 @@
           return;
 
         case 'gen_text':
+        default:
           $(this).val($.fn.generateText( 3 ));
           return;
 
         case 'dont_fill':
-        default:
           return;
       }
     }
