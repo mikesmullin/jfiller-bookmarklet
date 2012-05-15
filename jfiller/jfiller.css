@@ -1,0 +1,167 @@
+.ff-console {
+	position: absolute;
+	right: 20px;
+	top: 0;
+	width: 350px;
+	float: left;
+	font-size: 12px;
+	font-family: 'Trebuchet MS', Arial, Tahoma, sans-serif;
+}
+
+.ff-console .ff-list {
+	position: relative;
+	width: 100%;
+	background: white;
+	border: 2px solid #777;
+	border-top: none;
+	padding: 10px 0; 
+	text-align: left;
+	float: left;
+	clear: right;
+	overflow: hidden;
+	display: none;
+
+	-webkit-border-radius: 0 0 10px 10px;
+	-moz-border-radius:  0 0 10px 10px;
+	border-radius:  0 0 10px 10px;
+}
+
+.ff-console .ff-list A.close,
+.ff-menu .close A {
+	float: right;
+	display: inline;
+	margin: 0 20px;
+	color: #B00C02;
+	text-decoration: underline;
+}
+
+.ff-menu .close A { margin: 0; }
+
+.ff-console .ff-list A.close:HOVER,
+.ff-menu .close A:HOVER { text-decoration: none; }
+
+.ff-console .ff-list H2 {
+	margin: 10px;
+	padding: 0 0 10px;
+	display: block;
+	clear: both;
+	font-weight: normal;
+	font-size: 17px;
+	text-transform: uppercase;
+	border-bottom: 1px solid #373737;
+}
+
+.ff-console .ff-list P {
+	margin: 0 10px 20px;
+	display: block;
+	font-size: 13px;
+	float: left;
+}
+
+.ff-console .ff-list P A {
+	color: #239ADA;
+	float: left;
+	text-decoration: underline;
+}
+
+.ff-console .ff-list P A:HOVER {
+	color: #239ADA;
+	text-decoration: none;
+}
+
+.ff-console .ff-list P SPAN {
+	margin: 0 5px;
+}
+
+.ff-console .ff-list P INPUT {
+	display: inline;
+	margin-left: 25px;
+	float: left;
+	position: relative;
+	line-height: 100%;
+	margin-top: 2px;
+}
+
+.ff-console .ff-list P LABEL {
+	display: inline;
+	margin-left: 5px;
+	margin-top: 2px;
+	float: left;
+}
+
+.ff-menu {
+	position: absolute;
+	left: 0;
+	top: 0;
+	z-index: 15000;
+	background: white;
+	font-size: 12px;
+	color: #333;
+	font-family: 'Trebuchet MS', Arial, Helvetica, sans-serif;
+	padding: 5px 7px 5px 3px;
+	display: none;
+
+	border: 1px solid #CCC;
+	-webkit-border-radius: 3px;
+	-moz-border-radius: 3px;
+	border-radius: 3px;
+}
+
+.ff-menu TABLE TD {
+	text-align: left;
+	padding: 3px 2px;
+	color: #777;
+	font-size: 13px;
+}
+
+.ff-menu TD.close {
+	padding-top: 5px;
+	border-top: 1px solid #EEE;
+	
+}
+
+.ff-menu TABLE INPUT {
+	border: 1px solid #CCC;
+
+	-webkit-border-radius: 3px;
+	-moz-border-radius: 3px;
+	border-radius: 3px;
+
+	padding: 3px;
+	color: #777;
+	font-size: 12px;
+}
+
+.ff-console A.ff-tail {
+	float: right;
+	clear: both;
+	margin: 0 25px;
+	display: inline;
+	position: relative;
+	padding: 5px 10px;
+	border: 2px solid #777;
+	border-top-color: white;
+	background: white;
+	margin-top: -2px;
+	cursor: pointer;
+	font-size: 13px;
+
+	-webkit-border-radius: 0 0 10px 10px;
+	-moz-border-radius:  0 0 10px 10px;
+	border-radius:  0 0 10px 10px;
+}
+
+A.ff-edit-options {
+	position: absolute;
+	width: 23px;
+	height: 23px;
+	background: url("./images/edit.gif") no-repeat left top;
+	z-index: 10000;
+	display: none;
+	outline: none;
+	-moz-outline: none;
+}
+
+A.ff-edit-options SMALL {
+	display: none;
+}
