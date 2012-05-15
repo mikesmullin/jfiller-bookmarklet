@@ -352,7 +352,7 @@
   }
 
   $.fn.setValue = function( option ) {
-    if($(this).is('input:not(:checkbox,:radio)').not('[type="hidden"]')) {
+    if($(this).is('input:not(:checkbox,:radio,[type=hidden])')) {
 
       if(option == null) { option = $.Defaults.text; }
 
