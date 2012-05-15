@@ -321,7 +321,7 @@
 
           $('form').each(function(idx, fm) {
             if($(fm).data('order') == ('form-' + $(ctrl).val())) {
-              $(fm).fillForm();
+              btnFill.trigger('click');
             }
           });
         }
@@ -348,7 +348,7 @@
   }
 
   $.fn.setValue = function( option ) {
-    if($(this).is('input:not(:checkbox,:radio)')) {
+    if($(this).is('input:not(:checkbox,:radio)').not('[type="hidden"]')) {
 
       if(option == null) { option = $.Defaults.text; }
 
@@ -374,12 +374,12 @@
 
           return;
 
-        case 'dont_fill':
+        case 'gen_text':
+          $(this).val($.fn.generateText( 3 ));
           return;
 
-        case 'gen_text':
+        case 'dont_fill':
         default:
-          $(this).val($.fn.generateText( 3 ));
           return;
       }
     }
