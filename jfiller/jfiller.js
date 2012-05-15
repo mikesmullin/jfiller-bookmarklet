@@ -243,12 +243,13 @@
             case 'any_from_list':
               return {name: 'any_from_list', value: $.button.menu.find('input[name="any_from_list"]').val()};
 
+            case 'gen_text':
+              return {name: 'gen_text', value: ''};
+
             case 'dont_fill':
+            default:
               return {name: 'dont_fill', value: ''};
 
-            case 'gen_text':
-            default:
-              return {name: 'gen_text', value: ''};
           }
         }
 
@@ -309,7 +310,9 @@
       var aFill = $('<input name="auto_fill" value="' + i + '" type="checkbox" id="af-' + i + '" />').appendTo(row);
       $('<label for="af-' + i + '">Auto Fill</label>').appendTo(row);
 
-      btnFill.click(function() { $(form).fillForm(); });
+      btnFill.click(function() {
+      debugger;
+      $(form).fillForm(); });
 
       aFill.click(function(){
         $.cookie( $(form).data('order'), ($(this).attr('checked') ? true : null) );
@@ -321,6 +324,7 @@
 
           $('form').each(function(idx, fm) {
             if($(fm).data('order') == ('form-' + $(ctrl).val())) {
+            debugger;
               btnFill.trigger('click');
             }
           });
