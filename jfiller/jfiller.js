@@ -310,9 +310,7 @@
       var aFill = $('<input name="auto_fill" value="' + i + '" type="checkbox" id="af-' + i + '" />').appendTo(row);
       $('<label for="af-' + i + '">Auto Fill</label>').appendTo(row);
 
-      btnFill.click(function() {
-      debugger;
-      $(form).fillForm(); });
+      btnFill.click(function() { $(form).fillForm(); });
 
       aFill.click(function(){
         $.cookie( $(form).data('order'), ($(this).attr('checked') ? true : null) );
@@ -324,8 +322,7 @@
 
           $('form').each(function(idx, fm) {
             if($(fm).data('order') == ('form-' + $(ctrl).val())) {
-            debugger;
-              btnFill.trigger('click');
+              setTimeout(function() { btnFill.trigger('click'); }, 1000);
             }
           });
         }
@@ -352,7 +349,7 @@
   }
 
   $.fn.setValue = function( option ) {
-    if($(this).is('input:not(:checkbox,:radio,[type=hidden])')) {
+    if($(this).is('input:not(:checkbox,:radio,[type=hidden],[type=submit],[type=reset])')) {
 
       if(option == null) { option = $.Defaults.text; }
 
