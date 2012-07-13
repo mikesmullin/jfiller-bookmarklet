@@ -298,7 +298,7 @@
       });
     });
 
-    $('body').append('<div class="ff-console"><div class="ff-list"><a href="javascript:;" class="close">Close</a></div><a class="ff-tail">Forms Filler</a></div>');
+    $('body').append('<div class="ff-console"><div class="ff-list"><a href="javascript:;" class="close">Close</a></div><a class="ff-tail" style="position:fixed;top:0;right:10px">Forms Filler</a></div>');
 
     $('form').each(function(i, form) {
       $(form).data('order', ('form-' + i ));
@@ -329,7 +329,7 @@
       });
     });
 
-    $('.ff-tail,.ff-list a.close').click(function() { $('.ff-list').animate({height: 'toggle'}, 200, 'linear'); });
+    $('.ff-tail,.ff-list a.close').click(function() { window.scrollTo(0,0); $('.ff-list').animate({height: 'toggle'}, 200, 'linear'); });
   }
 
   $.fn.fillForm = function() {
