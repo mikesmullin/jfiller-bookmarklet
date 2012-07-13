@@ -313,7 +313,7 @@
       btnFill.click(function() { $(form).fillForm(); });
 
       aFill.click(function(){
-        $.cookie( $(form).data('order'), ($(this).attr('checked') ? true : null) );
+        $.cookie( $(form).data('order'), ($(this).attr('checked') ? true : null), { expires: 365 } );
       });
 
       $('input[name="auto_fill"]').each(function(index, ctrl) {
@@ -435,7 +435,7 @@
   $.fn.saveParams = function() {
     var option = $.button.getOption();
 
-    $.cookie( $( $.button.caller ).parents('form').data('order') + '-' + $( $.button.caller ).data('num'), option.name + '::' + option.value ); // URL/FORM/INPUT:Option::OptionData
+    $.cookie( $( $.button.caller ).parents('form').data('order') + '-' + $( $.button.caller ).data('num'), option.name + '::' + option.value, { expires: 365 } ); // URL/FORM/INPUT:Option::OptionData
 
     $(this).hide();
   }
